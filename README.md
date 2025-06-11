@@ -1,5 +1,5 @@
 # Proyecto Examen2
-
+![](./documento/img/caratula.png)
 <br/><br/>
 
 # Estructura del proyecto
