@@ -1,0 +1,100 @@
+
+% Mostrar hasta paragraph (cuarto nivel) en la tabla de contenido
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+% Personalizar paragraph para que actúe como una mini-sección
+\titleformat{\paragraph}
+  {\normalfont\normalsize\bfseries} % estilo
+  {\theparagraph}                   % numeración
+  {1em}                             % espacio entre número y título
+  {}                                % código antes del título
+
+% Asegura que los paragraph tengan su propia línea
+\titlespacing*{\paragraph}{0pt}{1.5ex plus 0.5ex minus .2ex}{1em}
+
+%----------------------------------------------------------------------------
+\begin{doublespace} 
+
+    % Definición de colores personalizados
+    \definecolor{lightgray}{rgb}{0.9, 0.9, 0.9}
+    \definecolor{lightblue}{rgb}{0.8, 0.9, 1.0}
+    \definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+    \definecolor{bleudefrance}{rgb}{0.19, 0.55, 0.91}
+
+    \renewcommand{\arraystretch}{1.6} % Espaciado entre filas
+
+
+\section{SPRINT N° 1}
+\subsection{TAREAS A REALIZAR DURANTE EL SPRINT PLANNING (R-2)}
+
+% Usamos \addcontentsline para incluir el paragraph en el índice
+\paragraph{\Large\textbf {Historia de Usuario (propone el Product Owner)}}
+
+\subfile{1/R-2/a/Historia_de_usuario}
+
+\clearpage  %nueva pagina
+% Usamos \addcontentsline para incluir el paragraph en el índice
+\paragraph{\Large\textbf {Objetivo del Sprint (definido por el Scrum Máster)}}
+\addcontentsline{toc}{paragraph}{Objetivo del Sprint}
+\subfile{1/R-2/b/Objetivo_sprint_1}
+
+%nueva pagina
+\paragraph{\Large\textbf {Planning Poker (estimación de Puntos)}}
+\addcontentsline{toc}{paragraph}{Planning Poker}
+\subfile{1/R-2/c/Planning_poker}
+
+\clearpage  %nueva pagina
+\paragraph{\large\textbf {SELECCIÓN DE HISTORIAS DE USUARIOS (desarrolladores)}}
+\addcontentsline{toc}{paragraph}{selecciona de Historias de Usuario}
+\subfile{1/R-2/d/HU_a_desarrollar}
+
+\clearpage  %nueva pagina
+\paragraph{\Large\textbf {DISEÑO DE LA SOLUCIÓN (desarrolladores)}}
+\addcontentsline{toc}{paragraph}{Diseño de la Solución}
+\subfile{1/R-2/e/Diseño_solucion}
+
+\clearpage %nueva pagina
+\paragraph{\Large\textbf {SPRINT BACKLOG}}
+\addcontentsline{toc}{paragraph}{Sprint Backlog}
+\subfile{1/R-2/f/Sprint_Backlog}
+
+
+%---------------------------------------------------------------------------
+
+\clearpage  %nueva pagina
+%TAREAS A REALIZAR DURANTE EL SPRINT PLANNING (R-3)- NUESTRO SCRUM
+
+\subsubsection{ACTIVIDADES A REALIZAR DURANTE LA EJECUCION DEL SPRINT (R-3)}
+
+\paragraph{\Large\textbf {Diseño de la arquitectura de software}}
+\addcontentsline{toc}{paragraph}{diseño de la arquitectura de software}
+\subfile{1/R-3/D_H_U_seleccion/D_H_U_seleccionada}
+
+
+%---------------------------------------------------------------------------
+\clearpage  %nueva pagina
+\begin{landscape}
+
+    \subsubsection*{\Large\textbf{SCRUM DIARIO (DAILY SCRUM)}}
+    \addcontentsline{toc}{paragraph}{SCRUM DIARIO (DAILY SCRUM)}
+    \subfile{1/R-3/daily_scrum}
+
+\end{landscape}
+
+
+
+%---------------------------------------------------------------------------
+\clearpage  %nueva pagina
+\subsubsection{REVISION DE SPRINT (R-4)}
+
+\subfile{1/R-4/revision_sprint}
+
+
+
+
+%---------------------------------------------------------------------------
+\subsubsection{RETROSPECTIVA DE SPRINT (R-5)}
+\subfile{1/R-5/retrospectiva_sprint}
+
+\end{doublespace}
